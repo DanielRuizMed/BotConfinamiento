@@ -9,9 +9,9 @@ bot.start((ctx) => {
     var hoy = new Date();
     var tiempo = "NO está confinada";
 
-    if( hoy < fin_cuarentena ) tiempo = Math.round((fin_cuarentena - hoy)/ (1000*60*60*24));
+    if( hoy < fin_cuarentena ) tiempo = Math.round((fin_cuarentena - hoy)/ (1000*60*60));
         
-    ctx.reply('Andalucía saldrá del confinamiento en '+tiempo);
+    ctx.reply('Andalucía saldrá del confinamiento en '+tiempo +"horas");
 });
 
 module.exports = async function (context, req) {  
